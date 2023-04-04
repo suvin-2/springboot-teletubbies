@@ -1,0 +1,73 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.project'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.junit.jupiter:junit-jupiter:5.7.0'
+	implementation 'org.jetbrains:annotations:20.1.0'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testCompileOnly 'org.projectlombok:lombok'
+	testAnnotationProcessor 'org.projectlombok:lombok'
+	implementation "org.springframework.boot:spring-boot-configuration-processor"
+	implementation "org.springframework.boot:spring-boot-starter-jdbc"
+	implementation "org.springframework.boot:spring-boot-starter-test"
+	implementation "org.mybatis.spring.boot:mybatis-spring-boot-starter:2.0.1"
+	implementation "org.mariadb.jdbc:mariadb-java-client"
+	implementation "org.elasticsearch:elasticsearch:7.9.0"
+	implementation "org.elasticsearch.client:elasticsearch-rest-high-level-client:7.9.0"
+	implementation "org.springframework.boot:spring-boot-starter-integration"
+	implementation "org.springframework.integration:spring-integration-stream"
+	implementation "org.springframework.boot:spring-boot-starter-aop"
+	implementation "org.springframework.boot:spring-boot-starter-test"
+	implementation "org.springframework.boot:spring-boot-starter-data-redis"
+	implementation 'org.apache.commons:commons-lang3:3.3'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.17.1'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.17.1'
+	implementation group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.17.1'
+
+	implementation "commons-io:commons-io:2.8.0"
+	implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-yaml'
+	implementation 'org.apache.kafka:kafka-clients:2.6.0'
+	implementation 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
+	implementation 'org.springframework.amqp:spring-rabbit:2.3.0'
+	implementation 'org.springframework.amqp:spring-amqp:2.3.0'
+	implementation 'org.springframework.kafka:spring-kafka:2.5.11.RELEASE'
+
+	implementation group: 'com.github.ulisesbocchio', name: 'jasypt-spring-boot-starter', version: '3.0.4'
+
+	implementation group: 'org.mariadb.jdbc', name: 'mariadb-java-client', version: '2.7.0'
+
+	implementation files('libs/log4jdbc-log4j2-jdbc4-1.16.jar')
+}
+
+configurations {
+	all {
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+		exclude group: 'org.springframework.boot', module: 'spring-boot-starter-log4j2'
+	}
+}
+test {
+	useJUnitPlatform()
+}
+
+bootJar {
+	launchScript()
+}

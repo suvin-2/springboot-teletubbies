@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--    # GWA -->
+<!--<configuration status="WARN">-->
+<!--    <appenders>-->
+<!--        <Console name="eclipseConsole" target="SYSTEM_OUT">-->
+<!--            <PatternLayout pattern="[%-5level][%d{yyyy-MM-dd HH:mm:ss}]%msg%n" />-->
+<!--        </Console>-->
+
+<!--        <RollingFile name="fileKlagoSchRes" fileName="./logs/schres.log" filePattern="./logs/schres.log.%d{yyyy-MM-dd}">-->
+<!--            <PatternLayout pattern="[%-5level][%d{yyyy-MM-dd HH:mm:ss}]%msg%n" />-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy interval="1" />-->
+<!--            </Policies>-->
+<!--            <DefaultRolloverStrategy max="5" />-->
+<!--        </RollingFile>-->
+<!--    </appenders>-->
+
+<!--    <loggers>-->
+<!--        <root level="info" additivity="false">-->
+<!--            <appender-ref ref="eclipseConsole" />-->
+<!--            <appender-ref ref="fileKlagoSchRes" />-->
+<!--        </root>-->
+
+<!--        <logger name="KlagoSchRes" level="trace" additivity="false">-->
+<!--            <appender-ref ref="eclipseConsole" />-->
+<!--            <appender-ref ref="fileKlagoSchRes" />-->
+<!--        </logger>-->
+<!--    </loggers>-->
+<!--</configuration>-->
+
+<!--    # DEV -->
+<configuration status="WARN">
+    <appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d %5p [%c][%L LINE] %m%n" />
+        </Console>
+
+<!--        <RollingFile name="fileKlagoBoard" fileName="./logs/gsm.log" filePattern="./logs/gsm.log.%d{yyyy-MM-dd}">-->
+<!--            <PatternLayout pattern="[%-5level][%d{yyyy-MM-dd HH:mm:ss}]%msg%n" />-->
+<!--            <Policies>-->
+<!--                <TimeBasedTriggeringPolicy interval="1" />-->
+<!--            </Policies>-->
+<!--            <DefaultRolloverStrategy max="5" />-->
+<!--        </RollingFile>-->
+    </appenders>
+    <loggers>
+        <logger name="org.springframework" level="ERROR" additivity="false">
+            <appenderRef ref="console" />
+        </logger>
+
+        <Logger name="jdbc.audit" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+        <Logger name="jdbc.resultset" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+        <Logger name="jdbc.resultsettable" level="FATAL" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+        <Logger name="jdbc.sqltiming" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+        <Logger name="jdbc.connection" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+        <Logger name="log4jdbc.debug" level="WARN" additivity="false">
+            <appender-ref ref="console"/>
+        </Logger>
+
+
+        <!-- Query Loggers 쿼리(파라미터까지) -->
+        <logger name="jdbc.sqlonly" level="info" additivity="false">
+            <appender-ref ref="console" />
+        </logger>
+        <root level="info">
+            <appenderRef ref="console" />
+<!--            <appender-ref ref="fileKlagoBoard" />-->
+        </root>
+    </loggers>
+</configuration>
