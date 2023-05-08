@@ -1,0 +1,49 @@
+[INFO ][2023-05-07 20:55:25]Starting TeletubbiesApplication on 민영 with PID 18852 (C:\study\springboot-teletubbies\out\production\classes started by yny97 in C:\study\springboot-teletubbies)
+[INFO ][2023-05-07 20:55:25]No active profile set, falling back to default profiles: default
+[INFO ][2023-05-07 20:55:26]Multiple Spring Data modules found, entering strict repository configuration mode!
+[INFO ][2023-05-07 20:55:26]Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+[INFO ][2023-05-07 20:55:26]Finished Spring Data repository scanning in 27ms. Found 0 Redis repository interfaces.
+[INFO ][2023-05-07 20:55:27]Post-processing PropertySource instances
+[INFO ][2023-05-07 20:55:27]Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[INFO ][2023-05-07 20:55:27]Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[INFO ][2023-05-07 20:55:27]Skipping PropertySource servletContextInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[INFO ][2023-05-07 20:55:27]Converting PropertySource systemProperties [org.springframework.core.env.PropertiesPropertySource] to EncryptableMapPropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]Converting PropertySource systemEnvironment [org.springframework.boot.env.SystemEnvironmentPropertySourceEnvironmentPostProcessor$OriginAwareSystemEnvironmentPropertySource] to EncryptableSystemEnvironmentPropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]Converting PropertySource random [org.springframework.boot.env.RandomValuePropertySource] to EncryptablePropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]Converting PropertySource applicationConfig: [file:./config/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]Converting PropertySource applicationConfig: [classpath:/application.properties] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]Converting PropertySource applicationConfig: [classpath:/application.yml] [org.springframework.boot.env.OriginTrackedMapPropertySource] to EncryptableMapPropertySourceWrapper
+[INFO ][2023-05-07 20:55:27]No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+[INFO ][2023-05-07 20:55:27]No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+[INFO ][2023-05-07 20:55:27]No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+[INFO ][2023-05-07 20:55:28]Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ][2023-05-07 20:55:28]Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ][2023-05-07 20:55:28]Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO ][2023-05-07 20:55:28]Property Filter custom Bean not found with name 'encryptablePropertyFilter'. Initializing Default Property Filter
+[INFO ][2023-05-07 20:55:28]Property Resolver custom Bean not found with name 'encryptablePropertyResolver'. Initializing Default Property Resolver
+[INFO ][2023-05-07 20:55:28]Property Detector custom Bean not found with name 'encryptablePropertyDetector'. Initializing Default Property Detector
+[INFO ][2023-05-07 20:55:31]Tomcat initialized with port(s): 8024 (http)
+[INFO ][2023-05-07 20:55:31]Root WebApplicationContext: initialization completed in 6374 ms
+[INFO ][2023-05-07 20:55:32]Initializing ExecutorService 'applicationTaskExecutor'
+[INFO ][2023-05-07 20:55:38]
+
+Using generated security password: ed511c03-574b-41c7-84e8-fe806db3d7be
+
+[INFO ][2023-05-07 20:55:38]Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4d7f9b33, org.springframework.security.web.context.SecurityContextPersistenceFilter@5b2ade46, org.springframework.security.web.header.HeaderWriterFilter@79e15c4a, org.springframework.security.web.csrf.CsrfFilter@6318ff9, org.springframework.security.web.authentication.logout.LogoutFilter@b53ce18, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@47f416d0, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@42257df7, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@782e0844, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@70044113, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@6c3a7b84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@6870a76f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@608c7b5b, org.springframework.security.web.session.SessionManagementFilter@3c4e17ea, org.springframework.security.web.access.ExceptionTranslationFilter@662061e3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@3ffe74da]
+[INFO ][2023-05-07 20:55:38]Initializing ExecutorService 'taskScheduler'
+[INFO ][2023-05-07 20:55:38]Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+[INFO ][2023-05-07 20:55:38]Channel 'application.errorChannel' has 1 subscriber(s).
+[INFO ][2023-05-07 20:55:38]started bean '_org.springframework.integration.errorLogger'
+[INFO ][2023-05-07 20:55:38]Tomcat started on port(s): 8024 (http) with context path '/teletubbies'
+[INFO ][2023-05-07 20:55:38]Refreshing cached encryptable property sources on ServletWebServerInitializedEvent
+[INFO ][2023-05-07 20:55:38]Property Source systemProperties refreshed
+[INFO ][2023-05-07 20:55:38]Property Source systemEnvironment refreshed
+[INFO ][2023-05-07 20:55:38]Property Source random refreshed
+[INFO ][2023-05-07 20:55:38]Property Source applicationConfig: [file:./config/application.yml] refreshed
+[INFO ][2023-05-07 20:55:38]Property Source applicationConfig: [classpath:/application.properties] refreshed
+[INFO ][2023-05-07 20:55:38]Property Source applicationConfig: [classpath:/application.yml] refreshed
+[INFO ][2023-05-07 20:55:38]Converting PropertySource server.ports [org.springframework.core.env.MapPropertySource] to EncryptableMapPropertySourceWrapper
+[INFO ][2023-05-07 20:55:38]Skipping PropertySource configurationProperties [class org.springframework.boot.context.properties.source.ConfigurationPropertySourcesPropertySource
+[INFO ][2023-05-07 20:55:38]Skipping PropertySource servletConfigInitParams [class org.springframework.core.env.PropertySource$StubPropertySource
+[INFO ][2023-05-07 20:55:38]Converting PropertySource servletContextInitParams [org.springframework.web.context.support.ServletContextPropertySource] to EncryptableEnumerablePropertySourceWrapper
+[INFO ][2023-05-07 20:55:38]Started TeletubbiesApplication in 14.602 seconds (JVM running for 17.412)

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.test.api.mapper.TbMapper">
+
+    <!-- 로그인 시도 시 유저 확인 -->
+    <select id="getUserCount" parameterType="java.util.Map" resultType="java.lang.Integer">
+        SELECT COUNT(*)
+        FROM t_tb_user
+        WHERE 1=1
+        AND user_id = #{userId}
+        AND user_pw = #{userPw}
+    </select>
+
+    <!-- 로그인 유저 정보 -->
+    <select id="gettUserInfo" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT user_seq as "userSeq",
+        user_id as "userId",
+        user_pw as "userPw",
+        user_name as "userName",
+        phone as "userPhone",
+        email as "userEmail",
+        user_auth as "userType"
+        FROM t_tb_user
+        WHERE 1=1
+        AND user_id = #{userId}
+        AND user_pw = #{userPw}
+    </select>
+
+</mapper>
+
