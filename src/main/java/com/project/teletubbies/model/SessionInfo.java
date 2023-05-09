@@ -25,8 +25,12 @@ public class SessionInfo implements Serializable {
     private String user_auth;
     private TbUserInfo tbUserInfo;
 
+    public SessionInfo() {
+
+    }
+
     public TbUserInfo getTbUserInfo() {
-        return tbUserInfo;
+        return this.tbUserInfo;
     }
 
     public void setTbUserInfo(TbUserInfo tbUserInfo) {
@@ -34,7 +38,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getUser_id() {
-        return user_id;
+        return this.user_id;
     }
 
     public void setUser_id(String user_id) {
@@ -42,7 +46,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getUser_pw() {
-        return user_pw;
+        return this.user_pw;
     }
 
     public void setUser_pw(String user_pw) {
@@ -50,7 +54,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getUser_name() {
-        return user_name;
+        return this.user_name;
     }
 
     public void setUser_name(String user_name) {
@@ -58,7 +62,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getNickName() {
-        return nickName;
+        return this.nickName;
     }
 
     public void setNickName(String nickName) {
@@ -66,7 +70,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getPhone() {
-        return phone;
+        return this.phone;
     }
 
     public void setPhone(String phone) {
@@ -74,7 +78,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getEmail() {
-        return email;
+        return this.email;
     }
 
     public void setEmail(String email) {
@@ -82,7 +86,7 @@ public class SessionInfo implements Serializable {
     }
 
     public String getUser_auth() {
-        return user_auth;
+        return this.user_auth;
     }
 
     public void setUser_auth(String user_auth) {
@@ -91,6 +95,6 @@ public class SessionInfo implements Serializable {
 
     public String toString() {
         return "SessionInfo(user_id=" + this.getUser_id() + ", user_pw=" + this.getUser_pw() + ", user_name=" + this.getUser_name() + ", nickName=" + this.getNickName()
-                + ", phone=" + this.getPhone() + ", email=" + this.getEmail() + ", user_auth=" + this.getUser_auth() ;
+                + ", phone=" + this.getPhone() + ", email=" + this.getEmail() + ", user_auth=" + this.getUser_auth() + ", tbUserInfo = " + this.getTbUserInfo() ;
     }
 }

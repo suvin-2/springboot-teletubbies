@@ -28,5 +28,20 @@
         AND user_pw = #{userPw}
     </select>
 
+    <!-- 모든 유저 정보 -->
+    <select id="getUserList" parameterType="java.util.Map" resultType="java.util.Map">
+        SELECT user_seq as "userSeq",
+        user_id as "userId",
+        user_pw as "userPw",
+        user_name as "userName",
+        phone as "userPhone",
+        email as "userEmail",
+        user_auth as "userType"
+        FROM t_tb_user
+        WHERE 1=1
+<!--        AND user_id = #{userId}-->
+<!--        AND user_pw = #{userPw}-->
+    </select>
+
 </mapper>
 

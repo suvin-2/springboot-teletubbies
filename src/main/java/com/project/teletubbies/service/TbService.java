@@ -1,10 +1,14 @@
 package com.project.teletubbies.service;
 
+import com.project.teletubbies.dao.TbUserInfo;
 import com.project.teletubbies.handler.HandlerManager;
 import com.project.teletubbies.handler.IHandler;
+import com.project.teletubbies.mapper.CommonMapper;
 import com.project.teletubbies.mapper.TbMapper;
 import com.project.teletubbies.model.APIResult;
 import com.project.teletubbies.model.RequestModel;
+import com.project.teletubbies.model.SessionInfo;
+import com.project.teletubbies.service.impl.ITbService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,13 +16,12 @@ import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpServletResponse;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Locale;
+import java.util.*;
 
 @Service
 @RequiredArgsConstructor
 @Slf4j  // 로그 찍기
-public class TbService {
+public class TbService implements ITbService {
     SimpleDateFormat format = new SimpleDateFormat ( "yyyy-MM-dd HH:mm:sss");
     Date time = new Date();
     String localTime = format.format(time);
@@ -27,6 +30,9 @@ public class TbService {
 
     @Autowired
     HandlerManager handlerManager;
+
+    @Autowired
+    CommonMapper commonMapper;
 
     public Object action(RequestModel requestModel, String ApiCode) {
         //사용자 언어 코드를 따라 다국어 정의
@@ -37,6 +43,7 @@ public class TbService {
         locale = Locale.KOREAN;
         // <--
 
+        log.info("TbService start ");
 
         IHandler handler = null;
         //결과값 객체 선언
@@ -44,6 +51,9 @@ public class TbService {
         try{
             //요청 URL의 서비스 명에 맞는 핸들러를 가져옵니다.
             handler = handlerManager.get(ApiCode);
+            log.info("TbService ApiCode : " + ApiCode);
+            log.info("TbService handler : " + handler);
+
         }catch(Exception e) {
             // 로직중 에러 로그 처리를 위하여 에러 로그 함수를 사용합니다.
             log.info("개발자 입력 정보" + e.getMessage());
@@ -55,6 +65,7 @@ public class TbService {
             result.setResultMsg(ApiCode);
             // 로직중 에러 로그 처리를 위하여 에러 로그 함수를 사용합니다.
             log.error("TbService handler is Null");
+            log.info("TbService handler is Null");
             return result;
         }else {
             try {
@@ -86,4 +97,5 @@ public class TbService {
 
         return result;
     }
+
 }

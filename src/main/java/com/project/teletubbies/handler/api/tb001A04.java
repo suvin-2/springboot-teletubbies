@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
@@ -31,14 +32,20 @@ public class tb001A04 extends AbstractHandler {
         Map<String, Object> params = (Map<String, Object>) new HashMap();
         params = (Map<String, Object>) requestModel.getData();
 
-        APIResult result = new APIResult();
+//        APIResult result = new APIResult();
 
         // 로그인 사용자 정보 가져올 경우 후에 위에 주석 풀기
         /*String clientIp = requestModel.getSessionInfo().getTbUserInfo().getClientIp();
         P00_KissCommonMethod.setInitData(clientIp, params, requestModel, redisManager);*/
 
+        List<Map<String, Object>> userList = tbMapper.getUserList(params);
+        for (Map<String, Object> userInfo : userList) {
+            // 추후 검색 조건 추가 시에 돌리기
+        }
 
-        return resultStatus;
+        resultMap.put("userList", userList);
+
+        return userList;
     }
 
 }

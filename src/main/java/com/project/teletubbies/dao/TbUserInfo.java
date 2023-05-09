@@ -1,6 +1,8 @@
 package com.project.teletubbies.dao;
 
-public class TbUserInfo {
+import java.io.Serializable;
+
+public class TbUserInfo implements Serializable {
 
     private String userId;
     private String userPw;
@@ -10,6 +12,9 @@ public class TbUserInfo {
     private String email;
     private String userAuth;
 
+    public TbUserInfo(){
+
+    }
 
     public String getUserId() {
         return userId;
@@ -69,6 +74,9 @@ public class TbUserInfo {
 
     @Override
     public String toString(){
-        return "";
+        return "TbUserInfo(userId=" + this.getUserId() + ", userPw=" + this.getUserPw() + ", " +
+                "userName=" + this.getUserName() + ", nickName=" + this.getNickName() +
+                ", phone=" + this.getPhone() + ", email=" + this.getEmail() +
+                ", userAuth=" + this.getUserAuth() + ")";
     }
 }
