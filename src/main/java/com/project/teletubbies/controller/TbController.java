@@ -2,10 +2,11 @@ package com.project.teletubbies.controller;
 
 
 import com.project.teletubbies.dao.TbUserInfo;
-import com.project.teletubbies.model.RequestModel;
 import com.project.teletubbies.model.SessionInfo;
+import com.project.teletubbies.model.RequestModel;
 import com.project.teletubbies.service.TbService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,11 +14,17 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
 import java.util.List;
 
-@RestController
+@Controller
+//@RestController
 @Slf4j
 public class TbController {
 
-    TbService tbService;
+//    TbService tbService;
+    private final TbService tbService;
+
+    public TbController(TbService tbService) {
+        this.tbService = tbService;
+    }
 
     @GetMapping("/hello")
     public List<String> Hello(){

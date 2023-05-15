@@ -1,7 +1,5 @@
 package com.project.teletubbies.model;
 
-import com.project.teletubbies.model.SessionInfo;
-
 public class RequestModel {
 
     //인증된 사용자 정보를 저장합니다.

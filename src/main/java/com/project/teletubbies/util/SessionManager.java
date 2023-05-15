@@ -1,11 +1,7 @@
 package com.project.teletubbies.util;
 
 //import com.amaranth10.backendcommon.util.model.SessionInfo;
-import com.project.teletubbies.model.SessionInfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import java.util.Map;
 
 /**
  * 세션관련 매니저 입니다. SessionInfo 객체를 사용합니다.

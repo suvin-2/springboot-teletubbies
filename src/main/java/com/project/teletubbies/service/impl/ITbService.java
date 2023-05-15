@@ -2,9 +2,6 @@ package com.project.teletubbies.service.impl;
 
 import com.project.teletubbies.model.RequestModel;
 
-import java.util.List;
-import java.util.Map;
-
 /**
  * 서비스 인터페이스입니다.
  * 

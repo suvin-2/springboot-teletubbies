@@ -8,9 +8,8 @@ import java.util.Map;
 @Mapper
 public interface TbMapper {
 
-    int getUserCount (Map<String, Object> params);
-
+    int getUserCount(Map<String, Object> param);
     Map<String, Object> getUserInfo (Map<String, Object> params);
-    List<Map<String, Object>> getUserList (Map<String, Object> params);
+    List<Map<String, Object>> getUserList(Map<String, Object> param);
 
 }

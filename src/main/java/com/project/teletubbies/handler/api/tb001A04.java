@@ -1,9 +1,7 @@
 package com.project.teletubbies.handler.api;
 
 import com.project.teletubbies.handler.AbstractHandler;
-import com.project.teletubbies.handler.IHandler;
 import com.project.teletubbies.mapper.TbMapper;
-import com.project.teletubbies.model.APIResult;
 import com.project.teletubbies.model.RequestModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
