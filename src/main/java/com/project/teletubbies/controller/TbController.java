@@ -76,6 +76,14 @@ public class TbController {
             TbUserInfo tbUserInfo = new TbUserInfo();
 
             // userSeq : 1
+            /*tbUserInfo.setUserId("admin");
+            tbUserInfo.setUserPw("1234567");
+            tbUserInfo.setUserName("관리자");
+            tbUserInfo.setNickName("텔레토비");
+            tbUserInfo.setPhone("010-1234-5678");
+            tbUserInfo.setEmail("tele@tobi.com");
+            tbUserInfo.setUserAuth("A");*/
+
             tbUserInfo.setUserId("admin");
             tbUserInfo.setUserPw("1234567");
             tbUserInfo.setUserName("관리자");

@@ -36,10 +36,12 @@ public class tb001A05 extends AbstractHandler {
 
         int checkLogin = 0;
         checkLogin = tbMapper.getUserCount(params);
+        log.info("userId : " + params.get("userId"));
+        log.info("userPw : " + params.get("userPw"));
 
         if(checkLogin == 1){
             // 로그인 사용자 정보가 있을 경우
-            log.info("======= tb001A04 로그인 성공 =======");
+            log.info("======= tb001A05 로그인 성공 =======");
             resultStatus = "success";
         }
 
