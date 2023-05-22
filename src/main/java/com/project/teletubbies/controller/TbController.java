@@ -31,6 +31,7 @@ public class TbController {
         return Arrays.asList("서버 포트는 8004", "리액트 포트는 3001");
     }
 
+    @CrossOrigin
     @RequestMapping(value = "/{ApiCode}", method = {RequestMethod.GET, RequestMethod.POST})
     @ResponseBody
     public Object APIHandler(
