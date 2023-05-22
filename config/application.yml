@@ -1,17 +1,23 @@
+server:
+  port: 8004
+  compression:
+    enabled: true
 spring:
-  config:
-    activate:
-      on-profile: local
+  cloud:
+    refresh:
+      enabled: false
   datasource:
+    ##    git push 시 아래 주석 처리
+    #    url: jdbc:log4jdbc:mariadb://14.41.2.189:13306/neos_default
+    #    driver-class-name: net.sf.log4jdbc.sql.jdbcapi.DriverSpy
     driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/sys
     username: root
-    password: root
-    url: jdbc:mysql://localhost:3306/teletubbies?serverTimezone=Asia/Seoul
-#  jpa:
-#    database-platform: org.hibernate.dialect.MySQL8Dialect
-#    hibernate:
-#      ddl-auto: none
-#      use-new-id-generator-mappings: false
-#    properties:
-#      hibernate:
-#        globally_quoted_identifiers: true
+    password: 976500
+
+mybatis:
+#  config-location: classpath:mybatis-config.xml
+  mapper-locations: classpath:query/mariaDB/*.xml
+
+logging:
+  config: ./log4j2.xml
